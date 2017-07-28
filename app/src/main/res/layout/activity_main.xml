@@ -7,18 +7,30 @@
         android:id="@+id/prompt_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:maxLines="15"
+        android:scrollbars="vertical"
         android:layout_marginTop="22dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignStart="@+id/download_btn" />
 
     <Button
         android:id="@+id/download_btn"
         android:text="@string/start_download"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="41dp"
+        android:layout_marginStart="30dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/cancel_all_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel All"
+        android:layout_alignBaseline="@+id/download_btn"
+        android:layout_alignBottom="@+id/download_btn"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="30dp" />
 
 </RelativeLayout>
