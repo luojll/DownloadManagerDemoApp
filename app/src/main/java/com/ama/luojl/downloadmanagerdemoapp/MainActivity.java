@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button mDownloadBtn;
     private Button mCancelAllBtn;
+    private Button mClearInfoBtn;
     private TextView mPromptTextView;
 
     private HashSet<Long> mEnqueuedIDSet;
@@ -68,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
     private void initView() {
         mDownloadBtn = (Button) findViewById(R.id.download_btn);
         mCancelAllBtn = (Button) findViewById(R.id.cancel_all_btn);
+        mClearInfoBtn = (Button) findViewById(R.id.clear_info_btn);
 
         mDownloadBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,6 +81,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 cancelAllDownload();
+            }
+        });
+        mClearInfoBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mPromptTextView.setText("");
             }
         });
 
