@@ -120,6 +120,7 @@ public class MainActivity extends AppCompatActivity {
             String action = intent.getAction();
             if (DownloadManager.ACTION_DOWNLOAD_COMPLETE.equals(action)) {
                 showString("ID: " + downloadId + ", download complete");
+                mEnqueuedIDSet.remove(downloadId);
 //                ParcelFileDescriptor fileDescriptor;
 //                try {
 //                    fileDescriptor = mDM.openDownloadedFile(downloadId);
